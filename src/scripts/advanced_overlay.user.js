@@ -37,7 +37,7 @@ if (window.top !== window.self) {
     if (oStateStorage !== null) {
       try {
         oState = Object.assign({}, oState, JSON.parse(oStateStorage));
-      } catch (e) { }
+      } catch { }
     }
 
 
