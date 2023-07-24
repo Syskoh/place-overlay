@@ -98,7 +98,7 @@ if (window.top !== window.self) {
     };
 
     const switchOverlay = () => {
-      oState.overlayIdx = oState.overlayIdx + 1 % OVERLAYS.length
+      oState.overlayIdx = (oState.overlayIdx + 1) % OVERLAYS.length
       updateImage();
       button.innerText = 'Switch Overlay\n(' + OVERLAYS[oState.overlayIdx][1] + ')';
       img.style.opacity = oState.opacity / 100;
@@ -109,6 +109,9 @@ if (window.top !== window.self) {
       const canvas = mainContainer
         .querySelector('garlic-bread-canvas')
         .shadowRoot.querySelector('canvas');
+      if (!canvas) {
+        return;
+      }
       const imgUrl = canvas
         .toDataURL('image/png');
 
