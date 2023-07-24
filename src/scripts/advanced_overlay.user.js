@@ -11,8 +11,6 @@
 // @grant        none
 // ==/UserScript==
 
-let width = "2500px";
-let height = "2000px";
 var button = null;
 
 if (window.top !== window.self) {
@@ -47,8 +45,6 @@ if (window.top !== window.self) {
     img.style.opacity = oState.opacity;
     img.style.top = '0px';
     img.style.left = '0px';
-    img.style.width = width;
-    img.style.height = height;
     img.style.zIndex = '100';
     img.onload = () => {
       console.log('loaded');
@@ -62,6 +58,24 @@ if (window.top !== window.self) {
       .querySelector('garlic-bread-canvas')
       .shadowRoot.querySelector('.container');
     positionContainer.appendChild(img);
+
+    // ==============================================
+    // Canvas size observer
+
+    const canvas = positionContainer.querySelector("canvas");
+    const canvasObserver = new MutationObserver(function(mutations) {
+            mutations.forEach(function(mutation) {
+                if (mutation.type === "attributes") {
+                    img.style.width = mutation.target.getAttribute("width") + "px";
+                    img.style.height = mutation.target.getAttribute("height") + "px";
+                }
+            });
+        });
+
+        canvasObserver.observe(canvas, {
+            attributes: true
+        });
+    
 
     // ==============================================
     // Add buttons to toggle overlay
