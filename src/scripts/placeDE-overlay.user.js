@@ -15,10 +15,24 @@ var overlayImage = null;
 if (window.top !== window.self) {
     window.addEventListener('load', () => {
         const canvasContainer = document.querySelector("garlic-bread-embed").shadowRoot.querySelector("div.layout").querySelector("garlic-bread-canvas").shadowRoot.querySelector("div.container");
+        const canvas = canvasContainer.querySelector("canvas");
         overlayImage = document.createElement("img");
         updateImage();
-        overlayImage.style = `position: absolute;left: 0;top: 0;image-rendering: pixelated;width: 2500px;height: 2000px;pointerEvents: 'none';`;
+        overlayImage.style = `position: absolute;left: 0;top: 0;image-rendering: pixelated;pointerEvents: 'none';`;
         canvasContainer.appendChild(overlayImage);
+
+        const canvasObserver = new MutationObserver((mutations) => {
+            mutations.forEach((mutation) => {
+                if (mutation.type === "attributes") {
+                    overlayImage.style.width = mutation.target.getAttribute("width") + "px";
+                    overlayImage.style.height = mutation.target.getAttribute("height") + "px";
+                }
+            });
+        });
+
+        canvasObserver.observe(canvas, {
+            attributes: true
+        });
     }, false);
 }
 
