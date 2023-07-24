@@ -41,7 +41,7 @@ const AO_STYLE = `
   .ao-button:hover {
     background: linear-gradient(rgba(0, 0, 0, 0.2) 0px, rgba(0, 0, 0, 0.2) 0px), rgb(255, 255, 255);
   }
-  .ao-oppacity-wrapper {
+  .ao-opacity-wrapper {
     position: relative;
     display: flex;
     align-items: center;
@@ -57,8 +57,8 @@ const AO_STYLE = `
     white-space: nowrap;
     box-sizing: border-box;
   }
-  .ao-oppacity-wrapper::before,
-  .ao-oppacity-wrapper::after {
+  .ao-opacity-wrapper::before,
+  .ao-opacity-wrapper::after {
     display: block;
     position: absolute;
     z-index: 99;
@@ -70,11 +70,11 @@ const AO_STYLE = `
     pointer-events: none;
     mix-blend-mode: darken;
   }
-  .ao-oppacity-wrapper::before {
+  .ao-opacity-wrapper::before {
     content: "+";
     top: -6px;
   }
-  .ao-oppacity-wrapper::after {
+  .ao-opacity-wrapper::after {
     content: "−";
     bottom: -2px;
   }
@@ -256,11 +256,11 @@ if (window.top !== window.self) {
 
     const addSlider = (text, min, max, val, onChange) => {
       const opacityWrapper = document.createElement('div');
-      opacityWrapper.classList.add('ao-oppacity-wrapper');
+      opacityWrapper.classList.add('ao-opacity-wrapper');
       opacityWrapper.title = text;
 
       const opacitySlider = document.createElement('input');
-      opacitySlider.classList.add('ao-oppactiy-slider');
+      opacitySlider.classList.add('ao-opactiy-slider');
       opacitySlider.type = "range";
       opacitySlider.min = min;
       opacitySlider.max = max;
