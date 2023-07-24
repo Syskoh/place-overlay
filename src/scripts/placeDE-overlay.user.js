@@ -1,18 +1,18 @@
 // ==UserScript==
-// @name         r/placeDE Template
+// @name         r/placeDE Template - For Trigun
 // @namespace    http://tampermonkey.net/
-// @version      8.7
+// @version      8.7.1
 // @description  try to take over the canvas!
-// @author       placeDE Devs
+// @author       placeDE Devs, Syskoh
 // @match        https://garlic-bread.reddit.com/embed*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=reddit.com
-// @updateURL    https://github.com/PlaceDE-Official/place-overlay/raw/main/src/scripts/placeDE-overlay.user.js
-// @downloadURL  https://github.com/PlaceDE-Official/place-overlay/raw/main/src/scripts/placeDE-overlay.user.js
+// @updateURL    https://github.com/Syskoh/place-overlay/raw/main/src/scripts/placeDE-overlay.user.js
+// @downloadURL  https://github.com/Syskoh/place-overlay/raw/main/src/scripts/placeDE-overlay.user.js
 // @run-at   document-start
 // ==/UserScript==
 
 const updateEvery = 30 * 1000;
-const src = "https://place.army/overlay_target.png";
+const src = "https://i.imgur.com/ZnRqlJz.png";
 const style =
   "position: absolute;left: 0;top: 0;image-rendering: pixelated;width: 1000px;height: 1000px;";
 
