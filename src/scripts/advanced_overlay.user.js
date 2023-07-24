@@ -78,7 +78,7 @@ const AO_STYLE = `
     content: "−";
     bottom: -2px;
   }
-  .ao-opactiy-slider {
+  .ao-opacity-slider {
     -webkit-appearance: none;
     appearance: none;
     height: 0;
@@ -88,7 +88,7 @@ const AO_STYLE = `
     opacity: 1;
     cursor: row-resize;
   }
-  .ao-opactiy-slider::-webkit-slider-thumb {
+  .ao-opacity-slider::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
     width: 24px;
@@ -97,7 +97,7 @@ const AO_STYLE = `
     cursor: pointer;
     border-radius: 0;
   }
-  .ao-opactiy-slider::-moz-range-thumb {
+  .ao-opacity-slider::-moz-range-thumb {
     width: 24px;
     height: 36px;
     background: rgb(0, 163, 104);
@@ -260,7 +260,7 @@ if (window.top !== window.self) {
       opacityWrapper.title = text;
 
       const opacitySlider = document.createElement('input');
-      opacitySlider.classList.add('ao-opactiy-slider');
+      opacitySlider.classList.add('ao-opacity-slider');
       opacitySlider.type = "range";
       opacitySlider.min = min;
       opacitySlider.max = max;
