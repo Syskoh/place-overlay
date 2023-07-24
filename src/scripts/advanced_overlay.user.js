@@ -63,19 +63,18 @@ if (window.top !== window.self) {
     // Canvas size observer
 
     const canvas = positionContainer.querySelector("canvas");
-    const canvasObserver = new MutationObserver(function(mutations) {
-            mutations.forEach(function(mutation) {
-                if (mutation.type === "attributes") {
-                    img.style.width = mutation.target.getAttribute("width") + "px";
-                    img.style.height = mutation.target.getAttribute("height") + "px";
-                }
-            });
-        });
+    const canvasObserver = new MutationObserver((mutations) => {
+      mutations.forEach((mutation) => {
+        if (mutation.type === "attributes") {
+          img.style.width = mutation.target.getAttribute("width") + "px";
+          img.style.height = mutation.target.getAttribute("height") + "px";
+        }
+      });
+    });
 
-        canvasObserver.observe(canvas, {
-            attributes: true
-        });
-    
+    canvasObserver.observe(canvas, {
+        attributes: true
+    });
 
     // ==============================================
     // Add buttons to toggle overlay

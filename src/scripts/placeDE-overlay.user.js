@@ -20,8 +20,8 @@ if (window.top !== window.self) {
         overlayImage.style = `position: absolute;left: 0;top: 0;image-rendering: pixelated;pointerEvents: 'none';`;
         canvasContainer.appendChild(overlayImage);
 
-        const canvasObserver = new MutationObserver(function(mutations) {
-            mutations.forEach(function(mutation) {
+        const canvasObserver = new MutationObserver((mutations) => {
+            mutations.forEach((mutation) => {
                 if (mutation.type === "attributes") {
                     overlayImage.style.width = mutation.target.getAttribute("width") + "px";
                     overlayImage.style.height = mutation.target.getAttribute("height") + "px";
