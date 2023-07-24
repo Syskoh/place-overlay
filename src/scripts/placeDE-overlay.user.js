@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         r/placeDE Template - For Trigun
 // @namespace    http://tampermonkey.net/
-// @version      8.7.1
+// @version      8.7.2
 // @description  try to take over the canvas!
 // @author       placeDE Devs, Syskoh
 // @match        https://garlic-bread.reddit.com/embed*
@@ -12,7 +12,7 @@
 // ==/UserScript==
 
 const updateEvery = 30 * 1000;
-const src = "https://i.imgur.com/ZnRqlJz.png";
+const src = "https://raw.githubusercontent.com/Syskoh/place-overlay/main/img/trigun.png";
 const style =
   "position: absolute;left: 0;top: 0;image-rendering: pixelated;width: 1000px;height: 1000px;";
 
