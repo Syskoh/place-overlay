@@ -42,20 +42,22 @@ Nach dem Installieren siehst du auf der r/place Leinwand kleinere "Pixel" innerh
 
 ### Erweiterte Variante:
 
-Mit dem Knopf unten rechts (1) kann man zwischen mehreren Modi wechseln:  
-1. - Kleine Pixel (wie im normalen Overlay);  
-   - Button hat "kleine Pixel" als Aufschrift  
+Der Kamera Button (1) erstellt ein Screenshot vom gesamten Canvas.
+
+Mit dem Knopf unten rechts (2) kann man zwischen mehreren Modi wechseln:
+1. - Kleine Pixel (wie im normalen Overlay);
    - Dies ist der Standardmodus, welcher bei jedem Neuladen der Seite aktiv ist
-  
-2. - Volle Pixel, d.h. man sieht wie das Bild aussehen sollte und falsche Pixel werden vollständig überdeckt  
-   - Button hat "große Pixel" als Aufschrift  
+   - ![Vorschau des erweiterten Overlays](img/advanced_overlay_sm.png)
+
+2. - Volle Pixel, d.h. man sieht wie das Bild aussehen sollte und falsche Pixel werden vollständig überdeckt
    - Dieser Modus eignet sich sehr gut, wenn man das ganze Bild ohne Fehler sehen will
+   - ![Vorschau des erweiterten Overlays](img/advanced_overlay_big.png)
 
-Welcher Modus aktiv ist, erkennt man anhand der Aufschrift des Buttons (1).
+Welcher Modus aktiv ist, erkennt man am Icon und anhand vom Tooltip des Buttons (2).
 
-Außerdem gibt es unter dem Button einen Schieberegler (2).  
-Dieser regelt, wie "durchscheinend" das Overlay sein soll.  
-Auf der ganz linken Position ist das Overlay komplett durchsichtig.
+Außerdem gibt es unter dem Button einen Schieberegler (3).
+Dieser regelt, wie "durchscheinend" das Overlay sein soll.
+Auf der ganz unteren Position ist das Overlay komplett durchsichtig.
 
 ![Vorschau des erweiterten Overlays](img/advanced_overlay.png)
 
